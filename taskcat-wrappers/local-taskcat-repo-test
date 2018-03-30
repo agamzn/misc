@@ -1,0 +1,4 @@
+echo [ // LOCAL IMAGE  ]
+echo [development image]
+echo [ !! From ~/taskcat/ ]
+sudo docker run -it --rm -v /home/ec2-user/.config/pudb:/root/.config/pudb -v /home/ec2-user/.aws:/root/.aws -v $(pwd):/mnt -v ~/taskcat:/root/taskcat local-tcat-develop python -m pudb.run /root/taskcat/taskcat.py $@
